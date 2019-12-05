@@ -1,4 +1,5 @@
 import React from "react";
+// import "./ProfileIcon.css";
 import {
   Dropdown,
   DropdownToggle,
@@ -14,6 +15,7 @@ class ProfileIcon extends React.Component {
     };
   }
 
+  // Use callback to avoid errors
   toggle = () => {
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
@@ -36,14 +38,16 @@ class ProfileIcon extends React.Component {
             />
           </DropdownToggle>
           <DropdownMenu
-            className="b--transparent shadow-5"
+            className="b--transparent shadow-5 dropdown-menu-right"
             style={{
               marginTop: "20px",
               backgroundColor: "rgba(255,255,255, 0.5)"
             }}
           >
             <DropdownItem>View Profile</DropdownItem>
-            <DropdownItem>Sign Out</DropdownItem>
+            <DropdownItem onClick={() => this.props.onRouteChange("signout")}>
+              Sign Out
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </div>
