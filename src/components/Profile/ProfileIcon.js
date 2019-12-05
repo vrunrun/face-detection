@@ -1,5 +1,5 @@
 import React from "react";
-// import "./ProfileIcon.css";
+import "./ProfileIcon.css";
 import {
   Dropdown,
   DropdownToggle,
